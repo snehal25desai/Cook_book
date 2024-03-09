@@ -1,12 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
 <script>
     tailwind.config { theme:
@@ -18,12 +21,89 @@
 </script>
 
     <title>Document</title>
-</head>
+    <style type="text/tailwindcss">
+      @layer components {
+        .btn-cats {
+          @apply flex justify-center items-center hover:bg-yellow-400 hover:shadow-xl h-8 text-center font-medium uppercase border-2 border-black w-full drop-shadow-md mr-1 p-1 pl-2 pr-2 rounded-full bg-fuchsia-400 text-gray-900;
+        }
+        .btn-nav {
+          @apply flex justify-center items-center hover:bg-yellow-400 hover:shadow-xl h-8 text-center font-medium uppercase border-2 border-black w-full drop-shadow-md mr-1 pl-4 pr-4 bg-fuchsia-400 text-gray-900;
+        }
+      }
+    </style>
+  </head>
 
-<body>
-    <header></header>
+  <body>
+    <header
+      class="block w-full h-screen md:h-5/6 bg-cyan-300 p-5 md:pb-20 bg-[url('./pattern3.png')] bg-cover rounded-bl-3xl rounded-br-3xl shadow-md"
+    >
+      <div
+        id="cat-search"
+        class="border-2 border-black flex flex-row w-full h-14 overflow-hidden rounded-full bg-cyan-400 shadow-inner shadow-inner"
+      >
+        <div
+          id="cat-wrap"
+          class="flex-start items-center justify-start flex flex-row w-full justify-around"
+        >
+          <div id="cat1" class="btn-cats bg-violet-400 ml-4" ="">Icecream</div>
+          <div id="cat1" class="btn-cats bg-orange-400">Milkshakes</div>
+          <div id="cat1" class="btn-cats bg-rose-400">Yoghurt</div>
+          <div id="cat1" class="btn-cats bg-pink-400">Donuts</div>
+          <div id="cat1" class="btn-cats bg-fuchsia-400">Coffee</div>
+          <div id="cat1" class="btn-cats bg-rose-400">Pancakes</div>
+          <div id="cat1" class="btn-cats bg-orange-400 mr-4">Dessert</div>
+        </div>
+        <div
+          id="search"
+          class="w-2/3 md:w-1/2 lg:w-1/4 h-14 absolute z-10 p-8 right-0"
+        >
+          <input
+            type="text"
+            name="search"
+            placeholder="search for recipes"
+            class="border-2 border-black h-10 ring-offset-2 w-full rounded-full p-1 pl-2 drop-shadow-lg"
+          />
+        </div>
+      </div>
+      <div
+        id="hero"
+        class="w-full h-5/6 md:h-full pt-10 md:p-10 lg:p-20 xl:p-20 flex flex-row flex-wrap md:flex-nowrap justify-center items-center"
+      >
+        <div id="header-img-wrap" class="md:ml-20">
+          <img
+            id="branding"
+            class="top-96 sm:top-96 md:top-80 lg:top-80 xl:top-80 -left-16 sm:-left-14 md:-left-14 lg:-left-24 xl:left-14 absolute w-5/6 sm:w-2/3 md:w-1/2 xl:w-1/3"
+            src="./icon.svg"
+            alt="icecream"
+            width="300"
+          />
+          <img
+            class="border-2 border-black w-full md:min-w-72 lg:min-w-96 md:max-w-screen-md md:mr-10 rounded-3xl shadow-lg"
+            src="https://images.unsplash.com/photo-1593558159516-d0be2a960c52?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="icecream"
+            width="100"
+          />
+        </div>
+        <div
+          id="header-typo-wrap"
+          class="w-full md:max-w-2xl md:ml-5 md:mr-20 flex flex-col items-center justify-center"
+        >
+          <h1
+            class="w-full text-5xl md:text-6xl font-bold mb-30 drop-shadow-xl text-black"
+            style="font-family: &quot;Madimi One&quot;"
+          >
+            Our <span class="text-amber-500">TOP 5</span> recipes featuring
+            strawberries!
+          </h1>
+          <h2 class="text-l md:text-xl font-medium font-madimi mt-10 mb-20">
+            Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit.
+            Arcu non odio euismod lacinia at quis risus sed vulputate odio ut
+            enim blandit volutpat maecenas volutpat blandit aliquam etiam erat!
+          </h2>
+        </div>
+      </div>
+    </header>
     <main>
-        <nav></nav>
         <!-- section 1 cards(latest) & categories-->
         <section>
             <div>
@@ -107,12 +187,44 @@
                 </div>
                <div><div class="flex justify-center align-center p-20"><button class="p-3 hover:bg-cyan-300 rounded-full bg-cyan-400 "><img clas="flex align-center" src="./img/right-arrow (1).png" alt="goRight" width="50px" height="50px"></div></div>
                 </div>
-        
-        <section>
-            <div></div>
-        </section>
+      <nav class="flex flex-row justify-center items-center">
+        <ul
+          class="p-4 border-2 border-black fixed bottom-8 flex flex-row justify-around items-center bg-cyan-200 shadow-xl rounded-full h-14"
+        >
+          <li>
+            <a
+              id="nav0"
+              class="btn-nav rounded-s-full border-r-0 bg-fuchsia-400"
+              href="./index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              id="nav1"
+              class="btn-nav border-r-0 bg-rose-400"
+              href="./recipe-page.html"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a id="nav2" class="btn-nav border-r-0 bg-orange-400" href=""
+              >Login</a
+            >
+          </li>
+          <li>
+            <a id="nav3" class="btn-nav border-r-0 bg-rose-400" href=""
+              >About</a
+            >
+          </li>
+          <li>
+            <a id="nav4" class="btn-nav rounded-r-full bg-fuchsia-400" href=""
+              >Forum</a
+            >
+          </li>
+        </ul>
+      </nav>
     </main>
     <footer></footer>
-</body>
-
+  </body>
 </html>
